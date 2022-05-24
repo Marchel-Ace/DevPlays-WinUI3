@@ -1,10 +1,16 @@
-﻿{
-    "profiles": {
-      "DevPlays-WinUI3 (Package)": {
-        "commandName": "MsixPackage"
-      },
-      "DevPlays-WinUI3 (Unpackaged)": {
-        "commandName": "Project"
-      }
+{
+  "profiles": {
+    "DevPlays-WinUI3 (Package)": {
+      "commandName": "MsixPackage",
+      "LayoutDir": "C:\\Users\\dev-ark\\OneDrive - Semesta Teknologi Informatika\\Documents 1",
+      "DeployOptionalPackages": false,
+      "remoteDebugEnabled": false,
+      "AlwaysReinstallApp": true,
+      "nativeDebugging": false,
+      "AllowLocalNetworkLoopback": true
+    },
+    "DevPlays-WinUI3 (Unpackaged)": {
+      "commandName": "Project"
     }
+  }
 }
