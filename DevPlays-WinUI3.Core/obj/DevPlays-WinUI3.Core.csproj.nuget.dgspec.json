@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\march\\OneDrive - Universitas Widyatama\\SEMESTER 4\\RPL\\Project\\TemplateStudio\\DevPlays-UWP\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj": {}
+    "D:\\Project\\School\\DevPlays-WinUI3\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\march\\OneDrive - Universitas Widyatama\\SEMESTER 4\\RPL\\Project\\TemplateStudio\\DevPlays-UWP\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj": {
+    "D:\\Project\\School\\DevPlays-WinUI3\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\march\\OneDrive - Universitas Widyatama\\SEMESTER 4\\RPL\\Project\\TemplateStudio\\DevPlays-UWP\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj",
+        "projectUniqueName": "D:\\Project\\School\\DevPlays-WinUI3\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj",
         "projectName": "DevPlays-WinUI3.Core",
-        "projectPath": "C:\\Users\\march\\OneDrive - Universitas Widyatama\\SEMESTER 4\\RPL\\Project\\TemplateStudio\\DevPlays-UWP\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj",
+        "projectPath": "D:\\Project\\School\\DevPlays-WinUI3\\DevPlays-WinUI3.Core\\DevPlays-WinUI3.Core.csproj",
         "packagesPath": "C:\\Users\\march\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\march\\OneDrive - Universitas Widyatama\\SEMESTER 4\\RPL\\Project\\TemplateStudio\\DevPlays-UWP\\DevPlays-WinUI3.Core\\obj\\",
+        "outputPath": "D:\\Project\\School\\DevPlays-WinUI3\\DevPlays-WinUI3.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\VSCOMPONENT\\SHARED\\NuGetPackages"
