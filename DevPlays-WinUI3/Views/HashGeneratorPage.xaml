@@ -11,12 +11,29 @@
     Style="{StaticResource PageStyle}">
 
     <Grid x:Name="ContentArea">
-        <StackPanel>
-            <RichEditBox></RichEditBox>
+        <StackPanel HorizontalAlignment="Center">
 
-            <TextBlock></TextBlock>
-            <TextBlock></TextBlock>
-            <TextBlock></TextBlock>
+            <StackPanel>
+                <TextBlock Text="Hash Generator" FontSize="24" />
+                <TextBox x:Name="hashEditBox" AutomationProperties.Name="simple text editor" Width="800" Height="200" TextChanged="Hash_Changed"   TextWrapping="Wrap" AcceptsReturn="True"/>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="MD5" FontSize="16" />
+                <TextBox x:Name="MD5Text" AutomationProperties.Name="simple text editor" Width="800" Height="50" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="SHA1" FontSize="16" />
+                <TextBox x:Name="SHA1Text" AutomationProperties.Name="simple text editor" Width="800" Height="50" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="SHA256" FontSize="16" />
+                <TextBox x:Name="SHA256Text" AutomationProperties.Name="simple text editor" Width="800"  Height="50" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="SHA512" FontSize="16" />
+                <TextBox x:Name="SHA512Text" AutomationProperties.Name="simple text editor" Width="800" Height="50" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True"/>
+            </StackPanel>
 
         </StackPanel>
     </Grid>

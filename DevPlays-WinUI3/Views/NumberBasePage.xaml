@@ -11,11 +11,28 @@
     Style="{StaticResource PageStyle}">
 
     <Grid x:Name="ContentArea">
-        <StackPanel Spacing="12">
-            <TextBox x:Name="binaryTextBox" Text="{Binding UpdateSourceTrigger=PropertyChanged}" />
-            <TextBox x:Name="octalTextBox" AutomationProperties.Name="simple text editor"  />
-            <TextBox x:Name="decimalTextBox" AutomationProperties.Name="simple text editor" />
-            <TextBox x:Name="hexTextBox" AutomationProperties.Name="simple text editor" />
+        <StackPanel Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Binary" />
+                <TextBox Name="binaryTextBox" Text="{Binding UpdateSourceTrigger=PropertyChanged}" Width="800" TextChanged="Binary_Changed" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Octal" />
+
+                <TextBox x:Name="octalTextBox" AutomationProperties.Name="simple text editor" Width="800" TextChanged="Octal_Changed"  />
+
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Decimal" />
+                <TextBox x:Name="decimalTextBox" AutomationProperties.Name="simple text editor" Width="800" TextChanged="Decimal_Changed"/>
+
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Hexadecimal" />
+
+                <TextBox x:Name="hexTextBox" AutomationProperties.Name="simple text editor" Width="800" TextChanged="Hex_Changed"/>
+
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
