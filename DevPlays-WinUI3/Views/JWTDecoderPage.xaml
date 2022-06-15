@@ -10,12 +10,22 @@
     mc:Ignorable="d"
     Style="{StaticResource PageStyle}">
 
-    <Grid x:Name="ContentArea">
-        <StackPanel>
-            <RichEditBox />
-            <RichTextBlock />
-            <RichTextBlock />
-            <RichTextBlock />
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <StackPanel>
+                <TextBlock Text="JWT Token" FontSize="24" />
+            <TextBox x:Name="jwtEditBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="JWT_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
+                </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Header" FontSize="24" />
+            <TextBox Width="800" x:Name="headerEditBox" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+    SelectionHighlightColor="Green"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Payload" FontSize="24" />
+            <TextBox x:Name="payloadEditBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+    SelectionHighlightColor="Green"/>
+            </StackPanel>
+
         </StackPanel>
-    </Grid>
+
 </Page>
