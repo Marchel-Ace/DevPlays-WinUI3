@@ -11,9 +11,20 @@
     Style="{StaticResource PageStyle}">
 
     <Grid x:Name="ContentArea">
-        <StackPanel>
-            <RichEditBox></RichEditBox>
-            <RichTextBlock></RichTextBlock>
+        <StackPanel Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <ToggleSwitch x:Name="baseModeSwitch" Header="Base 64 Encode" OffContent="Encode" OnContent="Decode" Toggled="baseMode_Changed" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="{x:Bind EditorHeaderName, Mode=TwoWay}" FontSize="24" />
+                <TextBox x:Name="editorBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="editorBox_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="{x:Bind ReadHeaderName, Mode=TwoWay}" FontSize="24" />
+                <TextBox Width="800" x:Name="readBox" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+        SelectionHighlightColor="Green"/>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Page>

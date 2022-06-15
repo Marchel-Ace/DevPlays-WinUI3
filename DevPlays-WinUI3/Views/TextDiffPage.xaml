@@ -10,17 +10,23 @@
     mc:Ignorable="d"
     Style="{StaticResource PageStyle}">
 
-    <Grid x:Name="ContentArea">
-        <StackPanel Spacing="12">
-            <RichEditBox>
-
-            </RichEditBox>
-            <RichEditBox>
-
-            </RichEditBox>
+    <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <TextBlock Text="Old Text" FontSize="24" />
+                <TextBox x:Name="oldTextBox" Text="{x:Bind OldText, Mode=TwoWay}" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="Old_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="New Text" FontSize="24" />
+                <TextBox Width="800" x:Name="newTextBox" Text="{x:Bind NewText, Mode=TwoWay}" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="New_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+    SelectionHighlightColor="Green"/>
+            </StackPanel>
 
         </StackPanel>
-        
-        <RichEditBox />
-    </Grid>
+        <StackPanel>
+            <TextBlock Text="Diff" FontSize="24" />
+            <RichTextBlock x:Name="diffTextBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0"   TextWrapping="Wrap" SelectionHighlightColor="Green"/>
+        </StackPanel>
+
+    </StackPanel>
 </Page>

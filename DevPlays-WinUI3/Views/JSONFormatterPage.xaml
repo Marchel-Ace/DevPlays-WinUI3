@@ -10,15 +10,16 @@
     mc:Ignorable="d"
     Style="{StaticResource PageStyle}">
 
-    <Grid x:Name="ContentArea">
-        <StackPanel Spacing="12">
-            <RichEditBox>
+        <StackPanel Spacing="12" Orientation="Horizontal">
+            <StackPanel>
+                <TextBlock Text="Plain Json" FontSize="24" />
+                <TextBox x:Name="plainBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="JWT_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Formatted Json" FontSize="24" />
+                <TextBox Width="800" x:Name="formattedBox" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+        SelectionHighlightColor="Green"/>
+            </StackPanel>
 
-            </RichEditBox>
-            <RichEditBox>
-
-            </RichEditBox>
-
-        </StackPanel>
-    </Grid>
+    </StackPanel>
 </Page>
