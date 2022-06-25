@@ -8,10 +8,10 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:models="using:DevPlays_WinUI3.Core.Models"
     mc:Ignorable="d"
-    Style="{StaticResource PageStyle}">
+    >
 
     <Grid x:Name="ContentArea">
-        <StackPanel>
+        <ScrollViewer>
                 <StackPanel Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal">
                         <ToggleSwitch x:Name="GzipSwitch" Header="GZIP Compress" OffContent="Compress" OnContent="Decompress" Toggled="Gzip_Changed" />
@@ -27,6 +27,6 @@
                     </StackPanel>
 
                 </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
