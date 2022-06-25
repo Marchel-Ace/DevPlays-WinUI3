@@ -8,11 +8,15 @@
     xmlns:behaviors="using:DevPlays_WinUI3.Behaviors"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     Loaded="OnLoaded"
-    Style="{StaticResource PageStyle}">
+    >
     <Grid>
-        <Border x:Name="AppTitleBar" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock x:Name="AppTitle" Text="DevPlays" VerticalAlignment="Top" Margin="0,8,0,0" />
-        </Border>
+        <Grid x:Name="AppTitleBar" Height="30">
+            <TextBlock x:Name="AppTitleTextBlock" Text="App title"
+               TextWrapping="NoWrap"
+               VerticalAlignment="Center"
+               Margin="28,0,0,0"/>
+        </Grid>
+
         <NavigationView
         x:Name="navigationView"
         IsBackButtonVisible="Visible"
@@ -21,7 +25,7 @@
         IsSettingsVisible="False"
         ExpandedModeThresholdWidth="1280"
         Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}"
-        Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+        Background="{ThemeResource SystemControlAcrylicElementBrush}">
             <NavigationView.MenuItems>
                 <!--
             TODO: Change the symbols for each item as appropriate for your app
@@ -36,10 +40,10 @@
                 <NavigationViewItem x:Uid="Shell_JSONFormatter" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.JSONFormatterViewModel" />
                 <NavigationViewItem x:Uid="Shell_Base64Converter" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.Base64ConverterViewModel" />
                 <NavigationViewItem x:Uid="Shell_GZIPConverter" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.GZIPConverterViewModel" />
+                <NavigationViewItem x:Uid="Shell_HashGenerator" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.HashGeneratorViewModel" />
                 <NavigationViewItem x:Uid="Shell_JWTDecoder" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.JWTDecoderViewModel" />
                 <NavigationViewItem x:Uid="Shell_TextDiff" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.TextDiffViewModel" />
                 <NavigationViewItem x:Uid="Shell_RegexTester" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.RegexTesterViewModel" />
-                <NavigationViewItem x:Uid="Shell_HashGenerator" Icon="Document" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.HashGeneratorViewModel" />
             </NavigationView.MenuItems>
             <NavigationView.HeaderTemplate>
                 <DataTemplate>

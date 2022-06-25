@@ -36,6 +36,11 @@ namespace DevPlays_WinUI3.Core.Models
 
         public string SymbolName { get; set; }
 
+        public string Name { get; set; }
+
+        public string Descriptions { get; set; }
+
+        public string NavigatedToName { get; set; }
         public ICollection<SampleOrderDetail> Details { get; set; }
 
         public override string ToString()

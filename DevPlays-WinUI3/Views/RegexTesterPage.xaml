@@ -8,12 +8,24 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:models="using:DevPlays_WinUI3.Core.Models"
     mc:Ignorable="d"
-    Style="{StaticResource PageStyle}">
+    >
 
-    <Grid x:Name="ContentArea">
-        <StackPanel>
-            <TextBox />
-            <RichEditBox/>
-        </StackPanel>
+    <Grid x:Name="ContentArea" Margin="0, 12, 0,0">
+        <ScrollViewer>
+            <StackPanel  HorizontalAlignment="Center" Spacing="12">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="Regex Pattern" FontSize="26"></TextBlock>
+
+                    <TextBox x:Name="regexPattern" Width="1000" Height="50"  TextChanged="regexPattern_TextChanged" />
+
+                </StackPanel>
+                <StackPanel Spacing="12">
+                    <TextBlock Text="Regex Test " FontSize="26"></TextBlock>
+
+                    <RichEditBox x:Name="regexText" Width="1000" Height="200" TextChanged="regexText_TextChanged"/>
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

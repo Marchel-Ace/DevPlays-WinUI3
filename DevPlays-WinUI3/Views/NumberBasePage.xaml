@@ -8,31 +8,33 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:models="using:DevPlays_WinUI3.Core.Models"
     mc:Ignorable="d"
-    Style="{StaticResource PageStyle}">
+    >
 
     <Grid x:Name="ContentArea">
+        <ScrollViewer>
         <StackPanel Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel>
-                <TextBlock Text="Binary" />
+                <TextBlock Text="Binary" FontSize="26" />
                 <TextBox Name="binaryTextBox" Text="{Binding UpdateSourceTrigger=PropertyChanged}" Width="800" TextChanged="Binary_Changed" />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Octal" />
+                <TextBlock Text="Octal" FontSize="26"/>
 
                 <TextBox x:Name="octalTextBox" AutomationProperties.Name="simple text editor" Width="800" TextChanged="Octal_Changed"  />
 
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Decimal" />
+                <TextBlock Text="Decimal" FontSize="26"/>
                 <TextBox x:Name="decimalTextBox" AutomationProperties.Name="simple text editor" Width="800" TextChanged="Decimal_Changed"/>
 
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Hexadecimal" />
+                <TextBlock Text="Hexadecimal" FontSize="26"/>
 
                 <TextBox x:Name="hexTextBox" AutomationProperties.Name="simple text editor" Width="800" TextChanged="Hex_Changed"/>
 
             </StackPanel>
         </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

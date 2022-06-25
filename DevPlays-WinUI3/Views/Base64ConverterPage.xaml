@@ -8,7 +8,7 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:models="using:DevPlays_WinUI3.Core.Models"
     mc:Ignorable="d"
-    Style="{StaticResource PageStyle}">
+    >
 
     <Grid x:Name="ContentArea">
         <StackPanel Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Center">

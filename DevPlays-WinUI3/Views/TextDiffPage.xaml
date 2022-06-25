@@ -8,25 +8,32 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:models="using:DevPlays_WinUI3.Core.Models"
     mc:Ignorable="d"
-    Style="{StaticResource PageStyle}">
+    >
 
-    <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" >
-        <StackPanel Orientation="Horizontal">
-            <StackPanel>
-                <TextBlock Text="Old Text" FontSize="24" />
-                <TextBox x:Name="oldTextBox" Text="{x:Bind OldText, Mode=TwoWay}" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="Old_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
-            </StackPanel>
-            <StackPanel>
-                <TextBlock Text="New Text" FontSize="24" />
-                <TextBox Width="800" x:Name="newTextBox" Text="{x:Bind NewText, Mode=TwoWay}" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="New_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+    <Grid x:Name="ContentArea">
+        <ScrollViewer>
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <StackPanel Orientation="Horizontal"  Spacing="12">
+                <StackPanel>
+                    <TextBlock Text="Old Text" FontSize="24" />
+                    <TextBox x:Name="oldTextBox" Text="{x:Bind OldText, Mode=TwoWay}" Width="500" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="Old_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="New Text" FontSize="24" />
+                    <TextBox Width="500" x:Name="newTextBox" Text="{x:Bind NewText, Mode=TwoWay}" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="New_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
     SelectionHighlightColor="Green"/>
+                </StackPanel>
+
+            </StackPanel>
+            <StackPanel x:Name="stackPanel">
+                <TextBlock Text="Diff" FontSize="24" />
+                <ScrollViewer Width="Auto" Height="auto" VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled">
+                    <RichTextBlock x:Name="diffTextBox" Width="auto" Height="480"    ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+                </ScrollViewer>
             </StackPanel>
 
         </StackPanel>
-        <StackPanel>
-            <TextBlock Text="Diff" FontSize="24" />
-            <RichTextBlock x:Name="diffTextBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0"   TextWrapping="Wrap" SelectionHighlightColor="Green"/>
-        </StackPanel>
+        </ScrollViewer>
+    </Grid>
 
-    </StackPanel>
 </Page>

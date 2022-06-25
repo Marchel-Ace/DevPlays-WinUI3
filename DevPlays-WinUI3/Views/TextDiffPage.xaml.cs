@@ -7,6 +7,12 @@ using DiffPlex.DiffBuilder;
 using System.ComponentModel;
 using System.Diagnostics;
 using DiffPlex.Model;
+using Microsoft.UI.Xaml.Documents;
+using Microsoft.UI.Xaml.Media;
+using DiffPlex.DiffBuilder.Model;
+using Microsoft.UI;
+
+using DiffPlex.Wpf.Controls;
 namespace DevPlays_WinUI3.Views
 {
     public sealed partial class TextDiffPage : Page, INotifyPropertyChanged
@@ -15,6 +21,7 @@ namespace DevPlays_WinUI3.Views
 
         public TextDiffPage()
         {
+
             ViewModel = App.GetService<TextDiffViewModel>();
             InitializeComponent();
         }
@@ -64,19 +71,84 @@ namespace DevPlays_WinUI3.Views
             NewText = newTextBox.Text;
 
             var diff = InlineDiffBuilder.Diff(OldText, NewText);
-            // Clear RichEditBox named diffTextBox
+            // Clear RichEditBox 
             diffTextBox.SelectAll();
 
             diffTextBox.Blocks.Clear();
-            
+            int _line = 0;
+
             foreach (var line in diff.Lines)
             {
 
+                Paragraph new_paragraph = new Paragraph();
+                Run run = new Run();
+
+                if (line.Type == ChangeType.Inserted)
+                {
+                    // Show line number in green
+                    run.Text = $"+ " + line.Text;
+                    run.Foreground = new SolidColorBrush(Colors.Green);
+                    new_paragraph.Inlines.Add(run);
+                }
+                else if (line.Type == ChangeType.Deleted)
+                {
+                    run.Text = $"- " + line.Text;
+                    run.Foreground = new SolidColorBrush(Colors.Red);
+                    new_paragraph.Inlines.Add(run);
+                }
+                else
+                {
+                    run.Text = $" " + line.Text;
+                    run.Foreground = new SolidColorBrush(Colors.White);
+                    new_paragraph.Inlines.Add(run);
+                }
+
+                diffTextBox.Blocks.Add(new_paragraph);
+                _line++;
             }
         }
 
         public void New_Changed(object sender, RoutedEventArgs e)
         {
+            OldText = oldTextBox.Text;
+            NewText = newTextBox.Text;
+
+            var diff = InlineDiffBuilder.Diff(OldText, NewText);
+            // Clear RichEditBox named diffTextBox
+            diffTextBox.SelectAll();
+
+            diffTextBox.Blocks.Clear();
+
+            int _line = 0;
+
+            foreach (var line in diff.Lines)
+            {
+
+                Paragraph new_paragraph = new Paragraph();
+                Run run = new Run();
+
+                if (line.Type == ChangeType.Inserted)
+                {
+                    // Show line number in green
+                    run.Text = $"+ " + line.Text;
+                    run.Foreground = new SolidColorBrush(Colors.Green);
+                    new_paragraph.Inlines.Add(run);
+                }
+                else if (line.Type == ChangeType.Deleted)
+                {
+                    run.Text = $"- " + line.Text;
+                    run.Foreground = new SolidColorBrush(Colors.Red);
+                    new_paragraph.Inlines.Add(run);
+                }
+                else
+                {
+                    run.Text = $" " + line.Text;
+                    run.Foreground = new SolidColorBrush(Colors.White);
+                    new_paragraph.Inlines.Add(run);
+                }
+                diffTextBox.Blocks.Add(new_paragraph);
+                _line++;
+            }
         }
     }
 }

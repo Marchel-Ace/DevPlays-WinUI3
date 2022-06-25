@@ -8,24 +8,30 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:models="using:DevPlays_WinUI3.Core.Models"
     mc:Ignorable="d"
-    Style="{StaticResource PageStyle}">
-
+    >
+    <Grid x:Name="ContentArea">
+        <ScrollViewer>
+            
         <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" >
-                <StackPanel>
+            <StackPanel>
                 <TextBlock Text="JWT Token" FontSize="24" />
-            <TextBox x:Name="jwtEditBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="JWT_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
-                </StackPanel>
+                <TextBox x:Name="jwtEditBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="JWT_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
+            </StackPanel>
             <StackPanel>
                 <TextBlock Text="Header" FontSize="24" />
-            <TextBox Width="800" x:Name="headerEditBox" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+                <TextBox Width="800" x:Name="headerEditBox" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
     SelectionHighlightColor="Green"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Payload" FontSize="24" />
-            <TextBox x:Name="payloadEditBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+                <TextBox x:Name="payloadEditBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
     SelectionHighlightColor="Green"/>
             </StackPanel>
 
         </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
 
 </Page>

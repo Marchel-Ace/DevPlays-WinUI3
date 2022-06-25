@@ -8,18 +8,23 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:models="using:DevPlays_WinUI3.Core.Models"
     mc:Ignorable="d"
-    Style="{StaticResource PageStyle}">
-
-        <StackPanel Spacing="12" Orientation="Horizontal">
-            <StackPanel>
-                <TextBlock Text="Plain Json" FontSize="24" />
-                <TextBox x:Name="plainBox" Width="800" Height="200" Grid.Row="1" Grid.Column="0" TextChanged="JWT_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
-            </StackPanel>
-            <StackPanel>
-                <TextBlock Text="Formatted Json" FontSize="24" />
-                <TextBox Width="800" x:Name="formattedBox" Height="200" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+    >
+    <Grid x:Name="ContentArea" Margin="0, 12, 0,0">
+        <ScrollViewer>
+            <StackPanel Spacing="12" Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Text="Plain JSON" FontSize="24" />
+                    <TextBox x:Name="plainBox" Width="500" Height="600" Grid.Row="1" Grid.Column="0" TextChanged="JWT_Changed" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" />
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Formatted JSON" FontSize="24" />
+                    <TextBox Width="500" x:Name="formattedBox" Height="600" Grid.Row="1" Grid.Column="0" IsReadOnly="True"  TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
         SelectionHighlightColor="Green"/>
+                </StackPanel>
+
             </StackPanel>
 
-    </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
 </Page>

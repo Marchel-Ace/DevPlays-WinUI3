@@ -24,7 +24,7 @@ namespace DevPlays_WinUI3.Views
             ViewModel.NavigationService.Frame = shellFrame;
             ViewModel.NavigationViewService.Initialize(navigationView);
 
-            App.MainWindow.ExtendsContentIntoTitleBar = true;
+            App.MainWindow.ExtendsContentIntoTitleBar = false ;
             App.MainWindow.SetTitleBar(AppTitleBar);
             
       
