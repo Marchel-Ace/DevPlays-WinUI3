@@ -33,17 +33,38 @@
             Or to use an IconElement instead of a Symbol see https://github.com/microsoft/TemplateStudio/blob/main/docs/UWP/projectTypes/navigationpane.md
             Edit String/en-US/Resources.resw: Add a menu item title for each page
             -->
-                <NavigationViewItem x:Uid="Shell_Main" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.MainViewModel" />
-                <NavigationViewItem x:Uid="Shell_NumberBase"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.NumberBaseViewModel" />
-                <NavigationViewItem x:Uid="Shell_SQLFormatter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.SQLFormatterViewModel" />
-                <NavigationViewItem x:Uid="Shell_XMLFormatter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.XMLFormatterViewModel" />
-                <NavigationViewItem x:Uid="Shell_JSONFormatter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.JSONFormatterViewModel" />
-                <NavigationViewItem x:Uid="Shell_Base64Converter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.Base64ConverterViewModel" />
-                <NavigationViewItem x:Uid="Shell_GZIPConverter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.GZIPConverterViewModel" />
-                <NavigationViewItem x:Uid="Shell_HashGenerator"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.HashGeneratorViewModel" />
-                <NavigationViewItem x:Uid="Shell_JWTDecoder"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.JWTDecoderViewModel" />
-                <NavigationViewItem x:Uid="Shell_TextDiff"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.TextDiffViewModel" />
-                <NavigationViewItem x:Uid="Shell_RegexTester"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.RegexTesterViewModel" />
+                <NavigationViewItem x:Uid="Shell_Main" Content="Home" helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.MainViewModel" />
+
+                <NavigationViewItem Content="Converters" ToolTipService.ToolTip="Account" Tag="SamplePage2">
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem x:Uid="Shell_NumberBase"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.NumberBaseViewModel" />
+                        <NavigationViewItem x:Uid="Shell_Base64Converter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.Base64ConverterViewModel" />
+                        <NavigationViewItem x:Uid="Shell_GZIPConverter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.GZIPConverterViewModel" />
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Formatters" ToolTipService.ToolTip="Account" Tag="SamplePage2">
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem x:Uid="Shell_SQLFormatter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.SQLFormatterViewModel" />
+                        <NavigationViewItem x:Uid="Shell_XMLFormatter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.XMLFormatterViewModel" />
+                        <NavigationViewItem x:Uid="Shell_JSONFormatter"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.JSONFormatterViewModel" />
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Decoders" ToolTipService.ToolTip="Account" Tag="SamplePage2">
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem x:Uid="Shell_JWTDecoder"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.JWTDecoderViewModel" />
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Text" ToolTipService.ToolTip="Account" Tag="SamplePage2">
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem x:Uid="Shell_TextDiff"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.TextDiffViewModel" />
+                        <NavigationViewItem x:Uid="Shell_RegexTester"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.RegexTesterViewModel" />
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Generators" ToolTipService.ToolTip="Account" Tag="SamplePage2">
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem x:Uid="Shell_HashGenerator"  helpers:NavigationHelper.NavigateTo="DevPlays_WinUI3.ViewModels.HashGeneratorViewModel" />
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
             <NavigationView.HeaderTemplate>
                 <DataTemplate>
